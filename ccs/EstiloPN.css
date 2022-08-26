@@ -1,0 +1,120 @@
+/*--Tambien se puede poner esto en cada seccion dandole fuentes especificas a cada una. Si se pone el @import no se usa link--*/
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Alumni+Sans+Collegiate+One&family=Dosis:wght@300&display=swap');
+
+*{
+    font-family: 'Dosis', sans-serif;
+        
+}
+
+body{
+    background: linear-gradient(90deg, rgba(249,255,255,1) 30%, rgba(215,240,254,1) 50%, rgba(192,226,255,1) 81%);
+}
+
+.navbar.navbar-expand-lg.bg-dark{
+    background: rgb(103,198,200);
+    background: linear-gradient(90deg, rgba(249,255,255,1) 30%, rgba(215,240,254,1) 50%, rgba(192,226,255,1) 81%);
+}
+
+.list-group-item{
+    background-color: transparent;
+    border: none;
+}
+
+
+.fa-brands.fa-facebook.fa-2xl{
+    color: blue;
+}
+
+.fa-brands.fa-facebook.fa-2xl:hover{
+    color: black;
+}
+
+
+.fa-brands.fa-whatsapp.fa-2xl{
+    color: green
+}
+
+.fa-brands.fa-whatsapp.fa-2xl:hover{
+    color: black
+}
+
+.fa-brands.fa-instagram.fa-2xl{
+    color: red
+}
+
+/*-- Cambia el color del icono al acercarce--*/
+.fa-brands.fa-instagram.fa-2xl:hover{
+    color: black
+}
+
+/*-- Aca se agrega una imagen al banner (z-index me permite surpeponer imagenes)--*/
+#banner{
+    background-color: white;
+    background-image: url(../img/background.png);
+    background-position: center;
+    background-size: 100%;
+    margin: auto;
+    background-repeat: no-repeat;
+    z-index: 0;
+    height: 25rem;
+}
+
+/*-- Esto seria si es para una imagen suelta fuera de row
+.rounded-circle.w-25{
+    width: 10rem !important;
+    z-index: 1;
+    background-color: white;
+    margin-top: 5rem;
+} --*/
+
+/*-- Para mover las columnas--*/
+.col-6.mt-9{
+    margin-top: 8rem;
+}
+
+.rounded-circle{
+    border-style: solid;
+    border-width: 1px;
+}
+
+.col-3.mt-9{
+    margin-top: 18rem;
+}
+
+#Inforesumen{
+    margin-top: -10rem;
+}
+
+#Experiencia{
+    border-top-style: solid;
+    border-width: 1px;
+    border-bottom: solid;
+    border-width: 1px;
+}
+
+#HardSoft{
+    border-top-style: solid;
+    border-width: 1px;
+    border-bottom: solid;
+    border-width: 1px;
+}
+
+.tituloseccion{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#labelHSS{
+    text-align: left;
+}
+
+#EEUU{
+    margin-top: -2rem;
+}
+
+#Proyecto{
+    border-top-style: solid;
+    border-width: 1px;
+    border-bottom: solid;
+    border-width: 1px;
+}

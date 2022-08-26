@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Web</title>
+    
+<!-- Bootstrap CSS (se baja de la pagina de bootstrap)-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+<!-- kit de iconos de font awesome es CSS se usa para agregar el lapiz para editar, tachito, redes sociales-->
+<script src="https://kit.fontawesome.com/b9b33f0188.js" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/brands.js" integrity="sha384-sCI3dTBIJuqT6AwL++zH7qL8ZdKaHpxU43dDt9SyOzimtQ9eyRhkG3B7KMl6AO19" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+
+<!-- Conexion con la pagina de estilo CSS-->
+<link href="ccs/EstiloPN.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+<!-- Comienza NavBar-->
+  <nav class="navbar navbar-expand-lg bg-dark" fixed-top>
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="img/PhotoRoom-20220811_142833-removebg-preview (1).png" alt="" class="d-inline-block align-text-top" width= 300rem>
+      </a>
+     <ul class="list-group list-group-horizontal">
+        <li class="list-group-item"><i class="fa-brands fa-facebook fa-2xl"></i></li>
+        <li class="list-group-item"><i class="fa-brands fa-whatsapp fa-2xl"></i></li>
+        <li class="list-group-item"><i class="fa-brands fa-instagram fa-2xl"></i></li>
+      </ul>
+      <!-- boton de login-->
+      <li class="list-group-item">
+        <i class="fa-solid fa-user-lock fa-2x1" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+      </li>
+    </div>
+  </nav>
+<!--Fin NavBar-->
+
+ <!-- Inicio Ventana Modal Login-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3 row">
+          <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@dominio.com">
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword">
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Enviar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Fin Ventana Modal Login-->
+
+<!-- Inicio Encabezado-->
+<div id="banner">
+  <div class="container-fluid text-center"> <!--container le da aire a lo que ponga-->
+    <div class="row"><!--Foto de perfil-->
+      <div class="col-3 mt-9">
+      </div>
+      <div class="col-6 mt-9"><img src="img/20180224_190159.png" class="rounded-circle" width= 250rem alt="VaninaDev"><button type="button" class="btn btn-transparent"><i class="fa-solid fa-pen" data-bs-toggle="modal" data-bs-target="#fotoperfilModal"></i></button>
+        <h3><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vanina Robledo</b><button type="button" class="btn btn-transparent"><i class="fa-solid fa-pen" data-bs-toggle="modal" data-bs-target="#NombreApellidoModal"></i></button></h3>
+        <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Full Stack Developer Jr.<button type="button" class="btn btn-transparent"><i class="fa-solid fa-pen" data-bs-toggle="modal" data-bs-target="#TituloModal"></i></button></h4>
+      </div>  
+      <div class="col-3 mt-9">
+      </div>
+    </div>
+        
+    <div class="row"> <!--Texto del perfil-->
+      <div class="col mt-1">
+        <p><strong>Soy una persona multitasking, experiencia obtenida no tanto en lo profesional, sino como madre 2 Experta en tareas administrativas por 25 años de experiencia en el rubro lo que me permite ser un excelente nexo con los usuarios. Siempre me gusto la docencia por lo que el trabajo en equipo y en colaboración me resulta una tarea muy comoda.</strong><button type="button" class="btn btn-transparent"><i class="fa-solid fa-pen" data-bs-toggle="modal" data-bs-target="#InfoModal"></i></button></i><button type="button" class="btn btn-transparent"><i class="fa-solid fa-trash-can"></i></button></p>
+      </div>
+    </div>
+</div><!--Fin Encabezado-->
+
+<!--Modal foto perfil-->
+<div class="modal fade" id="fotoperfilModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"><!--encabezado-->
+        <h5 class="modal-title"><b>Foto Perfil</b></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body"><!--cuerpo-->
+        <div class="mb-3">
+          <label for="formFileSm" class="form-label"><b>Seleccione el archivo</b></label>
+          <input class="form-control form-control-sm" id="formFileSm" type="file">
+        </div>
+       </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Guardar</button>
+        <button type="button" class="btn btn-Primary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Fin Modal foto perfil-->
+
+<!--Modal Nombre Usuario-->
+<div class="modal fade" id="NombreApellidoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"><!--encabezado-->
+        <h5 class="modal-title"><b>Datos Personales</b></h5>
+      </div>
+      <div class="modal-body"><!--cuerpo-->
+        <div class="mb-3">
+          <label for="NombreInput1" class="form-label"><b>Nombre y Apellido</b></label>
+          <input type="NombreApellido" class="form-control" id="NombreInput1">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Guardar</button>
+        <button type="button" class="btn btn-Primary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Fin Modal Nombre Usuario-->
+
+<!--Modal Titulo-->
+<div class="modal fade" id="TituloModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"><!--encabezado-->
+        <h5 class="modal-title"><b>Titulo</b></h5>
+      </div>
+      <div class="modal-body"><!--cuerpo-->
+        <div class="mb-3">
+          <label for="TituloInput2" class="form-label"><b>Ingrese el texto</b></label>
+          <input type="Titulo" class="form-control" id="TituloInput2">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Guardar</button>
+        <button type="button" class="btn btn-Primary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Fin Modal Titulo-->
+
+<!--Modal Info-->
+<div class="modal fade" id="InfoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"><!--encabezado-->
+        <h5 class="modal-title"><b>Info Resumida</b></h5>
+      </div>
+      <div class="modal-body"><!--cuerpo-->
+        <div class="mb-3">
+          <label for="InfoInput3" class="form-label"><b>Ingrese el texto</b></label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Guardar</button>
+        <button type="button" class="btn btn-Primary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Fin Modal Info-->
+
+<!--Inicio seccion Experencia Laboral-->
+<section id="Experiencia">
+  <!--Inicio EYSE-->
+  <div class="container mb-4"> 
+    <div class="row mt-4">
+      <h4 class="tituloseccion"><b>Experiencia</b></h4>
+      <h4></h4>
+      <div class="col-3">
+        <img src="img/EYSE-removebg-preview.png" width="80%" height="auto" alt="EYSEDev">
+      </div>
+      <div class="col-7">  
+        <h5><b>ADMINISTRACION</b></h5>
+        <h6><b>Marzo de 1997 – Actualidad</b></h6>
+        <p>Realice tareas de generación de pedidos de trabajos, cotizaciones, generación de planillas varias. Atención al cliente. Actualmente me encargo de la generación de contratos para los diversos clientes. Me encargaba de la generación manual y por proceso de la facturación del holding, coordinación telefónica de las cobranzas.</p>       
+      </div>
+      <div class="col-2">  
+        <button type="button" class="btn btn-transparent"><i class="fa-solid fa-pen" data-bs-toggle="modal" data-bs-target="#Exp1Modal"></i>
+        </button></i><button type="button" class="btn btn-transparent"><i class="fa-solid fa-trash-can"></i></button>
+      </div>
+    </div>
+  </div>    
+  <!--Fin EYSE-->
+
+  <!--Inicio IPC-->
+  <div class="row">
+    <div class="col-3">  
+      <img src="img/IPC-removebg-preview.png" width="80%" height="auto" alt="EYSEDev">
+    </div>
+    <div class="col-sm-7">  
+      <h5><b>PROFESORA</b></h5>
+        <h6><b>Febrero de 1994 – Diciembre de 1996</b></h6>
+        <p>Realice tareas de generación de pedidos de trabajos, cotizaciones, generación de planillas varias. Atención al cliente. Actualmente me encargo de la generación de contratos para los diversos clientes.</p>
+    </div>
+    <div class="col-2"> 
+      <button type="button" class="btn btn-transparent"><i class="fa-solid fa-pen" data-bs-toggle="modal" data-bs-target="#Exp2Modal"></i>
+      </button></i><button type="button" class="btn btn-transparent"><i class="fa-solid fa-trash-can"></i></button>
+    </div>   
+  </div>
+  <!--Fin IPC-->
+</section>
+<!--Fin experencia laboral-->
+
+<!--Modal EYSE-->
+<div class="modal fade" id="Exp1Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"><!--encabezado-->
+        <h5 class="modal-title"><b>Experencia Laboral</b></h5>
+      </div>
+      <div class="modal-body"><!--cuerpo-->
+        <div class="mb-3">
+          <label for="formFileSm" class="form-label"><b>Seleccione la imagen</b></label>
+          <input class="form-control form-control-sm" id="formFileSm" type="file">
+        </div>
+        <div class="mb-3">
+          <label for="EYSEInput1" class="form-label"><b>Titulo del Puesto</b></label>
+          <input type="Titulo" class="form-control" id="EYSEInput1">
+        </div>
+        <div class="mb-3">
+          <label for="EYSEInput2" class="form-label"><b>Periodo</b></label>
+          <input type="Titulo" class="form-control" id="EYSEInput2">
+        </div>
+        <div class="mb-3">
+          <label for="EYSEInput3" class="form-label"><b>Tarea realizada</b></label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Guardar</button>
+        <button type="button" class="btn btn-Primary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Fin Modal EYSE-->
+
+<!--Modal IPC-->
+<div class="modal fade" id="Exp2Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"><!--encabezado-->
+        <h5 class="modal-title"><b>Experencia Laboral</b></h5>
+      </div>
+      <div class="modal-body"><!--cuerpo-->
+        <div class="mb-3">
+          <label for="formFileSm" class="form-label"><b>Seleccione la imagen</b></label>
+          <input class="form-control form-control-sm" id="formFileSm" type="file">
+        </div>
+        <div class="mb-3">
+          <label for="IPCInput1" class="form-label"><b>Titulo del Puesto</b></label>
+          <input type="Titulo" class="form-control" id="IPCInput1">
+        </div>
+        <div class="mb-3">
+          <label for="IPCInput2" class="form-label"><b>Periodo</b></label>
+          <input type="Titulo" class="form-control" id="IPCInput2">
+        </div>
+        <div class="mb-3">
+          <label for="IPCInput3" class="form-label"><b>Tarea realizada</b></label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Guardar</button>
+        <button type="button" class="btn btn-Primary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Fin Modal IPC-->
+
+<!--Comienzo Estudios-->
+<section id="Estudios">
+  <div class="container mb-4"> 
+    <div class="row mt-3">
+      <h4 class="tituloseccion" ><b>Educación</b></h4>
+      <h4></h4>
+        <div class="col-3 mt-3 align-text-top">
+          <img src="img/EEUU.jpg" width= 100rem height="auto" alt="EYSEDev">
+        </div>
+        <div class="col-7">  
+          <h5><b>ESCUELA NORMAL EE UU DE AMERICA</b></h5>
+          <h6><b>BACHILLER CON ORIENTACION DOCENTE</b></h6>
+          <h6>1989 - 1993</h6>        
+        </div>
+        <div class="col-2">  
+          <button type="button" class="btn btn-transparent"><i class="fa-solid fa-pen" data-bs-toggle="modal" data-bs-target="#Estudio1Modal"></i>
+          </button></i><button type="button" class="btn btn-transparent"><i class="fa-solid fa-trash-can"></i></button>
+        </div>        
+        <div class="col-3 mt-3" id="ArgProg">
+          <img src="img/descarga.png" width= 100rem height="auto" alt="EYSEDev">
+        </div>
+        <div class="col-7">  
+          <h5><b>ARGENTINA PROGRAMA</b></h5>
+          <h6><b>Desarrollador Web Full Stack Jr</b></h6>
+          <h6>Agosto 2022 - Enero 2023</h6>        
+        </div>
+        <div class="col-2">  
+          <button type="button" class="btn btn-transparent"><i class="fa-solid fa-pen" data-bs-toggle="modal" data-bs-target="#Estudio2Modal"></i>
+          </button></i><button type="button" class="btn btn-transparent"><i class="fa-solid fa-trash-can"></i></button>
+        </div>
+
+    </div>
+  </div>
+</section>
+<!--Fin Estudios-->
+
+<!--Modal Estudio EEUU-->
+<div class="modal fade" id="Estudio1Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"><!--encabezado-->
+        <h5 class="modal-title"><b>Estudios</b></h5>
+      </div>
+      <div class="modal-body"><!--cuerpo-->
+        <div class="mb-3">
+          <label for="formFileSm" class="form-label"><b>Seleccione la imagen</b></label>
+          <input class="form-control form-control-sm" id="formFileSm" type="file">
+        </div>
+        <div class="mb-3">
+          <label for="EEUUInput1" class="form-label"><b>Nombre de la institución</b></label>
+          <input type="Titulo" class="form-control" id="EEUUInput1">
+        </div>
+        <div class="mb-3">
+          <label for="EEUUInput2" class="form-label"><b>Titulo Obtenido</b></label>
+          <input type="Titulo" class="form-control" id="EEUUInput2">
+        </div>
+        <div class="mb-3">
+          <label for="EEUUInput3" class="form-label"><b>Periodo</b></label>
+          <input type="Titulo" class="form-control" id="EEUUInput3">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Guardar</button>
+        <button type="button" class="btn btn-Primary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Fin Modal Estudio EEUU-->
+
+<!--Modal Estudio ArgProg-->
+<div class="modal fade" id="Estudio2Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"><!--encabezado-->
+        <h5 class="modal-title"><b>Estudios</b></h5>
+      </div>
+      <div class="modal-body"><!--cuerpo-->
+        <div class="mb-3">
+          <label for="formFileSm" class="form-label"><b>Seleccione la imagen</b></label>
+          <input class="form-control form-control-sm" id="formFileSm" type="file">
+        </div>
+        <div class="mb-3">
+          <label for="APInput1" class="form-label"><b>Nombre de la institución</b></label>
+          <input type="Titulo" class="form-control" id="APInput1">
+        </div>
+        <div class="mb-3">
+          <label for="APInput2" class="form-label"><b>Titulo Obtenido</b></label>
+          <input type="Titulo" class="form-control" id="APInput2">
+        </div>
+        <div class="mb-3">
+          <label for="APInput3" class="form-label"><b>Periodo</b></label>
+          <input type="Titulo" class="form-control" id="APInput3">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Guardar</button>
+        <button type="button" class="btn btn-Primary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Fin Modal Estudio ArgProg-->
+
+<!--Comienzo Hard & soft Skill-->
+<section id="HardSoft">
+  <div class="container mb-4"> 
+    <div class="row mt-3">
+      <h4 class="tituloseccion"><b>Hard & Soft Skills</b></h4>
+      <h4></h4>
+      <div class="col-sm-10">
+            <label id="labelHSS" class="form-label"><b>Lenguaje Programacion</b></label>
+          <div class="progress mb-1">
+            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 80%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+            <label id="labelHSS" class="form-label"><b>Bases de Datos</b></label>
+          <div class="progress mb-1">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <label id="labelHSS" class="form-label"><b>Ingles</b></label>
+          <div class="progress mb-1">
+            <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 70%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+            <label id="labelHSS" class="form-label"><b>Conocimiento de Softward Administrativo</b></label>
+          <div class="progress mb-1">
+            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 95%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+            <label id="labelHSS" class="form-label"><b>Trabajo En Equipo</b></label>
+          <div class="progress mb-1">
+            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 98%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+            <label id="labelHSS" class="form-label"><b>Creatividad</b></label>
+          <div class="progress mb-1">
+            <div class="progress-bar progress-bar-striped bg-secondary" role="progressbar" style="width: 80%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+            <label id="labelHSS" class="form-label"><b>Habilitades Comunicativas</b></label>
+          <div class="progress mb-4">
+            <div class="progress-bar progress-bar-striped bg-dark" role="progressbar" style="width: 75%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+      </div>
+      <div class="col-2">
+          <button type="button" class="btn btn-transparent"><i class="fa-solid fa-pen" data-bs-toggle="modal" data-bs-target="#HSSModal"></i>
+          </button></i><button type="button" class="btn btn-transparent"><i class="fa-solid fa-trash-can"></i></button>
+      </div>
+   </div>
+  </div>
+</section>
+<!--Fin Hard & soft Skill-->  
+
+<!--Modal Hard & soft Skill-->
+<div class="modal fade" id="HSSModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"><!--encabezado-->
+        <h5 class="modal-title"><b>Hard & Soft Still</b></h5>
+        <h5 class="modal-title"><b>Ingrese el Porcentaje</b></h5>
+      </div>
+      <div class="modal-body"><!--cuerpo-->
+        <div class="mb-3 row">
+          <div class="col-sm-7">          
+            <label for="HSSInput1" class="form-label"><b>Lenguaje Programacion</b></label>
+          </div>
+          <div class="col-sm-5">          
+            <input type="Titulo" class="form-control" id="HSSInput1">
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <div class="col-sm-7"> 
+            <label for="HSSInput2" class="form-label"><b>Base de Datos</b></label>
+          </div>
+          <div class="col-sm-5">
+            <input type="Titulo" class="form-control" id="HSSInput2">
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <div class="col-sm-7">
+            <label for="HSSInput3" class="form-label"><b>Ingles</b></label>
+          </div>
+          <div class="col-sm-5">
+            <input type="Titulo" class="form-control" id="HSSInput3">
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <div class="col-sm-7">
+            <label for="HSSInput4" class="form-label"><b>Conocimiento de Softward Administrativo</b></label>
+          </div>
+          <div class="col-sm-5">
+            <input type="Titulo" class="form-control" id="HSSInput4">
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <div class="col-sm-7">
+            <label for="HSSInput5" class="form-label"><b>Trabajo En Equipo</b></label>
+          </div>
+          <div class="col-sm-5">
+            <input type="Titulo" class="form-control" id="HSSInput5">
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <div class="col-sm-7">
+            <label for="HSSInput6" class="form-label"><b>Creatividad</b></label>
+          </div>
+          <div class="col-sm-5">
+            <input type="Titulo" class="form-control" id="HSSInput6">
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <div class="col-sm-7">
+            <label for="HSSInput7" class="form-label"><b>Habilidades Comunicativas</b></label>
+          </div>
+          <div class="col-sm-5">
+            <input type="Titulo" class="form-control" id="HSSInput7">
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Guardar</button>
+        <button type="button" class="btn btn-Primary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Fin Modal hard & soft-->
+
+<!--Comienzo Proyecto-->
+<section id="Proyecto">
+  <div class="container mb-4"> 
+    <div class="row mt-3">
+      <h4 class="tituloseccion"><b>Proyectos Futuros</b></h4>
+      <h4></h4>      
+        <div class="col-3 mt-3 align-text-top">
+          <img src="img/WhatsApp Image 2022-08-19 at 3.16.43 PM.jpeg" width= 100rem height="auto" alt="EYSEDev">
+        </div>
+        <div class="col-7 ">  
+          <h5><b>MAMINNA TIENDA</b></h5>
+          <h6>Desarrollo de una tienda online para venta de productos y productos digitales.</h6>        
+        </div>
+        <div class="col-2">  
+          <button type="button" class="btn btn-transparent"><i class="fa-solid fa-pen" data-bs-toggle="modal" data-bs-target="#Proy1Modal"></i>
+          </button></i><button type="button" class="btn btn-transparent"><i class="fa-solid fa-trash-can"></i></button>
+        </div>        
+        <div class="col-3 mt-3">
+          <img src="img/BP.png" width= 100rem height="auto" alt="EYSEDev">
+        </div>
+        <div class="col-7">  
+          <h5><b>BRAULIO PROPIEDADES</b></h5>
+          <h6>Desarrollo de una pagina para poder visualizar las propiedades disponibles, sus caracteristicas y precio. Con un formulario que permita contactarse con la inmobiliaria</h6>
+        </div>
+        <div class="col-2">  
+          <button type="button" class="btn btn-transparent"><i class="fa-solid fa-pen" data-bs-toggle="modal" data-bs-target="#Proy2Modal"></i>
+          </button></i><button type="button" class="btn btn-transparent"><i class="fa-solid fa-trash-can"></i></button>
+        </div>        
+    </div>
+  </div>
+</section>
+<!--Fin Proyectos-->
+
+<!--Comienzo Proyecto-->
+<section id="final">
+  <div class="container mt-2 mb-5"> 
+    <div class="row mt-2">
+      <div class="col-3">
+        <h6><b>Proyectos by Vanina Robledo</b></h6>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col-sm-3">
+        <button type="button" class="btn bg-info" data-bs-dismiss="modal"><b> Descargar Curriculum</b></button>
+      </div>
+      <h1></h1>  
+      <h1></h1>    
+    </div>
+  </div>
+</section>
+<!--Fin Proyectos-->
+
+<!--Modal Nuevos Proyectos Maminna-->
+<div class="modal fade" id="Proy1Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"><!--encabezado-->
+        <h5 class="modal-title"><b>Nuevos Proyectos</b></h5>
+      </div>
+      <div class="modal-body"><!--cuerpo-->
+        <div class="mb-3">
+          <label for="formFileSm" class="form-label"><b>Seleccione la imagen</b></label>
+          <input class="form-control form-control-sm" id="formFileSm" type="file">
+        </div>
+        <div class="mb-3">
+          <label for="ProyInput1" class="form-label"><b>Nombre del Cliente</b></label>
+          <input type="Titulo" class="form-control" id="ProyInput1">
+        </div>
+        <div class="mb-3">
+          <label for="ProyInput2" class="form-label"><b>Detalle</b></label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Guardar</button>
+        <button type="button" class="btn btn-Primary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Fin Modal EYSE-->
+
+<!--Modal Nuevos Proyectos Braulio-->
+<div class="modal fade" id="Proy2Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"><!--encabezado-->
+        <h5 class="modal-title"><b>Nuevos Proyectos</b></h5>
+      </div>
+      <div class="modal-body"><!--cuerpo-->
+        <div class="mb-3">
+          <label for="formFileSm" class="form-label"><b>Seleccione la imagen</b></label>
+          <input class="form-control form-control-sm" id="formFileSm" type="file">
+        </div>
+        <div class="mb-3">
+          <label for="Proy2Input1" class="form-label"><b>Nombre del Cliente</b></label>
+          <input type="Titulo" class="form-control" id="Proy2Input1">
+        </div>
+        <div class="mb-3">
+          <label for="Proy2Input2" class="form-label"><b>Detalle</b></label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Guardar</button>
+        <button type="button" class="btn btn-Primary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Fin Modal Braulio-->
+
+
+
+
+<!-- Bootstrap JS (se baja de la pagina de bootstrap) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>  
+   
+</body>
+</html>
+
